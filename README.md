@@ -1,131 +1,163 @@
-# MERN Authentication App
+# 🔐 MERN Authentication App
 
-This is a MERN stack authentication project with user signup and login functionality.
+A full-stack **MERN (MongoDB, Express, React, Node.js)** authentication system that allows users to **sign up and log in securely**.
+The backend uses **Node.js, Express, MongoDB Atlas**, and **bcrypt** for password hashing.
 
-## Tech Stack
+---
 
-- MongoDB
-- Express.js
-- React.js
-- Node.js
-- JWT Authentication
-- bcrypt password hashing
+## 🚀 Features
 
-## Features
+* User Signup API
+* User Login API
+* Password hashing using **bcrypt**
+* Request validation using **Joi**
+* MongoDB Atlas cloud database
+* Express.js REST API
+* Clean MERN folder structure
 
-- User Signup
-- User Login
-- Password Encryption
-- API Validation using Joi
-- MongoDB Atlas database
+---
 
-## Project Structure
+## 🛠 Tech Stack
 
-auth-mern-app
-│
-├── backend
-│   ├── Controllers
-│   ├── Middlewares
-│   ├── Models
-│   ├── Routes
-│   └── index.js
-│
-└── frontend
-    ├── src
-    ├── public
-    └── package.json
+**Frontend**
 
-## Installation
+* React.js
+* CSS
 
-Clone the repository
+**Backend**
 
-git clone https://github.com/bigankumar/auth-mern-app
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
 
-Install backend dependencies
+**Security & Validation**
 
-npm install
+* bcrypt
+* Joi
 
-Run backend
+---
 
-npm start
-
-## Environment Variables
-
-Create a `.env` file in backend folder.
-
-PORT=8080  
-MONGO_CONN=your_mongodb_connection_string
-
-## API Endpoints
-
-POST /auth/signup  
-POST /auth/login
-
-## Author
-
-Bigan Kumar# MERN Authentication App
-
-This is a MERN stack authentication project with user signup and login functionality.
-
-## Tech Stack
-
-- MongoDB
-- Express.js
-- React.js
-- Node.js
-- JWT Authentication
-- bcrypt password hashing
-
-## Features
-
-- User Signup
-- User Login
-- Password Encryption
-- API Validation using Joi
-- MongoDB Atlas database
-
-## Project Structure
+## 📁 Project Structure
 
 auth-mern-app
 │
 ├── backend
 │   ├── Controllers
+│   │   └── AuthController.js
 │   ├── Middlewares
+│   │   └── AuthValidation.js
 │   ├── Models
+│   │   ├── db.js
+│   │   └── user.js
 │   ├── Routes
-│   └── index.js
+│   │   └── AuthRouter.js
+│   ├── index.js
+│   └── package.json
 │
 └── frontend
-    ├── src
-    ├── public
-    └── package.json
+├── src
+├── public
+└── package.json
 
-## Installation
+---
 
-Clone the repository
+## ⚙️ Installation
 
-git clone https://github.com/bigankumar/auth-mern-app
+### 1️⃣ Clone the repository
 
-Install backend dependencies
+git clone https://github.com/bigankumar/auth-mern-app.git
 
+---
+
+### 2️⃣ Go to project folder
+
+cd auth-mern-app
+
+---
+
+### 3️⃣ Install backend dependencies
+
+cd backend
 npm install
 
-Run backend
+---
+
+### 4️⃣ Start backend server
 
 npm start
 
-## Environment Variables
+Server will run on:
 
-Create a `.env` file in backend folder.
+http://localhost:8080
 
-PORT=8080  
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file inside **backend** folder.
+
+PORT=8080
 MONGO_CONN=your_mongodb_connection_string
 
-## API Endpoints
+---
 
-POST /auth/signup  
+## 📡 API Endpoints
+
+### Signup
+
+POST /auth/signup
+
+Example Request Body
+
+{
+"name": "Bigan",
+"email": "[bigan@example.com](mailto:bigan@example.com)",
+"password": "123456"
+}
+
+---
+
+### Login
+
 POST /auth/login
 
-## Author
+Example Request Body
 
-Bigan Kumar
+{
+"email": "[bigan@example.com](mailto:bigan@example.com)",
+"password": "123456"
+}
+
+---
+
+## 🧪 Testing API
+
+You can test the APIs using:
+
+* Postman
+* Thunder Client
+* Insomnia
+
+---
+
+## 📌 Future Improvements
+
+* JWT Authentication
+* Protected Routes
+* Refresh Tokens
+* Frontend Login & Signup UI
+* Deploy MERN app online
+
+---
+
+## 👨‍💻 Author
+
+**Bigan Kumar**
+
+GitHub:
+https://github.com/bigankumar
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub.
