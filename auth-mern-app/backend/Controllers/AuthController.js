@@ -2,7 +2,7 @@ const UserModel = require("../Models/user");
 const bcrypt = require("bcryptjs");
 
 const signup = async (req, res) => {
-    try {
+    try {  
         const { name, email, password } = req.body;
 
         const user = await UserModel.findOne({ email });
@@ -20,18 +20,22 @@ const signup = async (req, res) => {
             password
         });
 
-        userModel.password = await bcrypt.hash(password, 10);
+        userModel.password  = await bcrypt.hash(password, 10);
 
         await userModel.save();
 
         res.status(201).json({
             message: "Signup successful",
             success: true
-        });
+        }); 
 
     } catch (err) {
+        console.error("--- REAL ERROR DETECTED ---");
+        console.error(err); // This prints the error to your VS Code Terminal
+        
         res.status(500).json({
             message: "Internal server error",
+            error: err.message, // This sends the error name to Postman
             success: false
         });
     }
